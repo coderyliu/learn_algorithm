@@ -14,6 +14,19 @@ class ListNode {
   }
 }
 
+/* 双向链表 */
+class DoublyListNode {
+  val;
+  next;
+  prev;
+  constructor(val, next, prev) {
+    this.val = val;
+    this.next = next ? null : next;
+    this.prev = prev ? null : prev;
+  }
+}
+
 module.exports = {
-  ListNode
+  ListNode,
+  DoublyListNode
 };
