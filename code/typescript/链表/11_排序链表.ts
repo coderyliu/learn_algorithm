@@ -1,3 +1,5 @@
+// https://leetcode.cn/problems/sort-list/description/
+
 class ListNode {
   val: number;
   next: ListNode | null;
@@ -7,27 +9,21 @@ class ListNode {
   }
 }
 
-/**
- Do not return anything, modify head in-place instead.
- */
-function reorderList(head: ListNode | null): void {
-  // 原地旋转
+function sortList(head: ListNode | null): ListNode | null {
+  // 方法一：暴力 + sort
   const node: ListNode[] = [];
   let cur = head;
   while (cur) {
     node.push(cur);
     cur = cur.next;
   }
-
-  let l = 0;
-  let r = node.length - 1;
-  while (l < r) {
-    node[l].next = node[r];
-    node[r].next = node[l + 1];
-    l++;
-    r--;
+  node.sort((a, b) => a.val - b.val);
+  for (let i = 0; i < node.length; i++) {
+    node[i].next = node[i + 1] || null;
   }
-  node[l].next = null;
+  return node[0] || null;
+
+  // 方法二：归并排序
 }
 
 export {};
