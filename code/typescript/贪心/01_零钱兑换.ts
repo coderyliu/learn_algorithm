@@ -22,4 +22,6 @@ function coinChange(coins: number[], amount: number): number {
   return amount === 0 ? count : -1;
 }
 
+console.log(coinChange([1, 2, 5], 11));
+
 export {};
