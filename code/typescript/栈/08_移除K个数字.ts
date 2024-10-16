@@ -20,7 +20,7 @@ function removeKdigits(num: string, k: number): string {
   return stack.length ? stack.join("") : "0";
 }
 
-console.log(removeKdigits("1432219", 3));
+console.log(removeKdigits("14322190", 3));
 console.log(removeKdigits("10200", 1));
 console.log(removeKdigits("10", 2));
 console.log(removeKdigits("191787", 2));
