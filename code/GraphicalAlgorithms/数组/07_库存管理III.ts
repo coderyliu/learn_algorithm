@@ -68,7 +68,7 @@ class MinHeap {
   }
 
   // 自顶向下堆化
-  siftDown(i: number): void {
+  #siftDown(i: number): void {
     while (true) {
       let min = i;
       // 获取左子节点索引
