@@ -10,7 +10,7 @@ function wordPuzzle(grid: string[][], target: string): boolean {
   const r = grid.length;
   const l = grid[0].length;
 
-  const dfs = (i: number, j: number, idx: number) => {
+  const dfs = (i: number, j: number, idx: number): boolean => {
     // base case
     if (i < 0 || j < 0 || i >= r || j >= l || grid[i][j] !== target[idx])
       return false;
